@@ -168,4 +168,53 @@ public class ctrlMetodos {
         return -Math.pow(2.7182818284590452353602874713527, -x) - 1;
     }
     
+    //SECANTE 
+    public tblSecante Secante(double xi1, double xi, double  error, int iteraciones){
+       ArrayList<CsSecante> lista = null;
+       tblSecante tabla;
+       double fxi1;
+       double errorc =1;
+       double fxi;
+       int iteracion =0;
+       fxi1 = getFxi(xi1);
+       fxi = getFxi(xi);
+            lista = new ArrayList<CsSecante>();
+            while(errorc > error && iteraciones > 0){
+             CsSecante fila = new CsSecante();
+             fila.setInteracion(iteracion +1);
+             fila.setXi1(xi1);
+             fila.setXi(xi);
+             fila.setFxi1(this.getFxi(fila.getXi1()));
+             fila.setFxi(this.getFxi(fila.getXi()));
+             fila.setN(fila.getFxi()*(fila.xi1-fila.xi));
+             fila.setD(fila.getFxi1()-fila.getFxi());
+             fila.setXi1r(fila.getXi()-(fila.getN()/fila.getD()));            
+             if (fila.getError()< 0) {
+                    errorc= this.errorRelativo(fila.getXi1r(), fila.getXi());
+                    
+                    xi1 = fila.getXi();
+                    xi = fila.getXi1r();
+                }else{
+                    errorc= this.errorRelativo(fila.getXi1r(), fila.getXi());
+                    xi1 = fila.getXi();
+                    xi = fila.getXi1r(); 
+                } //empiza baeza
+                fila.setError(errorc);             
+                lista.add(fila);
+                iteracion++;
+            }
+         tabla = new tblSecante(lista);
+         return tabla;     
+    } 
+    private double getFxi(double x){
+        return (Math.exp(-(x)))-x;
+    }
+    private double getFx(double x)
+    {
+        return ((9.8*68.1)/x)*(1-Math.exp(-(x/68.1)*10))-40;
+    }
+    private double error(double xActual, double xAnterior)
+    {
+    return Math.abs((xActual - xAnterior)/xActual);    
+    }
 }
