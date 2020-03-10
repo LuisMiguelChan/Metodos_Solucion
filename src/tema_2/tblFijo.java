@@ -42,7 +42,7 @@ public class tblFijo extends AbstractTableModel{
             
             case 2: return fila.getGx();
             
-            case 4: return fila.getError();
+            case 3: return fila.getError();
         }
         return null;
     }
