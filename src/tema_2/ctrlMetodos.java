@@ -217,4 +217,5 @@ public class ctrlMetodos {
     {
     return Math.abs((xActual - xAnterior)/xActual);    
     }
+    
 }

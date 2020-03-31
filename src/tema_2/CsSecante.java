@@ -61,8 +61,5 @@ public class CsSecante {
     public void setError(double error) {
         this.error = error;
     }
-    @Override
-    public String toString() {
-        return "CsSecante{" + "interacion=" + interacion + ", xi1=" + xi1 + ", xi=" + xi + ", fxi1=" + fxi1 + ", fxi=" + fxi + ", n=" + n + ", d=" + d + ", error=" + error + '}';
-    }   
+    
 }

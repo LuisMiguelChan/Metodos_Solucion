@@ -25,7 +25,7 @@ public class tblSecante extends AbstractTableModel {
         CsSecante fila = this.lista.get(i);
         switch(columna){
             case 0:
-                return fila.getInteracion();
+                return i;
             case 1: 
                 return fila.getXi1();
             case 2:
