@@ -1,5 +1,9 @@
+package tema_2;
 
-    public ArrayList<csFijo> PuntoFijo(double xo, double errorDeseado, int iteraciones)
+import java.util.ArrayList;
+
+public class Metodoo{
+    public ArrayList<csFijo> Metodoo(double xo, double errorDeseado, int iteraciones)
     	{ 
         double x = this.funcion(xo);
         double errorCalculado=1;
@@ -35,3 +39,4 @@
     	{
         return Math.pow(2.7182818284590452353602874713527,-x);
     }
+}

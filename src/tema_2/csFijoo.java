@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package metodos;
+package tema_2;
 
 /**
  *
  * @author Diana
  */
-public class csFijo {
+public class csFijoo {
     private int iteracion;
     private double xi,gx,error;
 

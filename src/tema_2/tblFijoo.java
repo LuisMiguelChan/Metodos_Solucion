@@ -3,22 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package metodos;
+package tema_2;
 
 import java.util.ArrayList;
 
-import javax.swing.tbl.AbstractTableModel;
+import javax.swing.table.AbstractTableModel;
 
 /**
  *
  * @author Diana
  */
-public class tblFijo extends AbstractTableModel{
+public class tblFijoo extends AbstractTableModel{
 
     private String[] columnas = {"i","xi","g(x)", "Error"};
     private ArrayList <csFijo> lista = null;
 
-    public tblFijo(ArrayList <csFijo> resultados) {
+    public tblFijoo(ArrayList <csFijo> resultados) {
         this.lista = resultados;
     }
     
